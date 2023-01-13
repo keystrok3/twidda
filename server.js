@@ -13,6 +13,9 @@ app.use(express.json());
 
 // Diary Entry routes
 app.post('/makeentry', require('./routes/posts.js'));
+app.get('/fetchentries', require('./routes/posts.js'));
+app.delete('/deleteentry/:post_id', require('./routes/posts.js'));
+app.post('/editentry/:post_id', require('./routes/posts.js'));
 
 
 

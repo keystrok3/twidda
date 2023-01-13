@@ -13,6 +13,7 @@ CREATE TABLE posts (
     title VARCHAR(100) NOT NULL,
     body VARCHAR(255) NOT NULL,
     time_posted timestamp,
+    edited boolean DEFAULT 0,
     PRIMARY KEY (post_id)
 );
 

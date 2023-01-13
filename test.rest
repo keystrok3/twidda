@@ -7,3 +7,22 @@ Content-Type: application/json
     "title": "Daily Devotion",
     "body": "The Lord's My Shepherd I'll not want"
 }
+
+
+###
+
+GET http://127.0.0.1:5000/fetchentries
+
+###
+
+DELETE http://127.0.0.1:5000/deleteentry/1
+
+###
+
+POST http://127.0.0.1:5000/editentry/1
+Content-Type: application/json
+
+{
+    "title": "Daily Devotion",
+    "body": "The Lord's My Shepherd I'll not want. He maketh me lie in green pastures"
+}
