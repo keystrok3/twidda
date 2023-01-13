@@ -1,19 +1,24 @@
 
+require('dotenv').config({ path: './.env'});
 const express = require('express');
 
 
 const app = express();
 
+const PORT = process.env.PORT;
 
-app.get('/', (req, res) => {
-    res.send()
-})
-
-
+// Middleware
+app.use(express.json());
 
 
-const server = app.listen(5000, () => {
-    console.log(`http://127.0.0.1:${5000}`);
+// Diary Entry routes
+app.post('/makeentry', require('./routes/posts.js'));
+
+
+
+
+const server = app.listen(PORT, () => {
+    console.log(`http://127.0.0.1:${PORT}`);
 });
 
 

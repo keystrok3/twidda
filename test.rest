@@ -1,0 +1,9 @@
+
+
+POST http://127.0.0.1:5000/makeentry
+Content-Type: application/json
+
+{
+    "title": "Daily Devotion",
+    "body": "The Lord's My Shepherd I'll not want"
+}
